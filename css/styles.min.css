@@ -1,0 +1,2 @@
+@font-face{font-family:"beautiful_mindsserif_one";src:url("../fonts/bminds-one-webfont.woff2") format("woff2"),url("../fonts/bminds-one-webfont.woff") format("woff");font-weight:normal;font-style:normal;font-display:swap}html:focus-within{scroll-behavior:smooth}body{font-family:aktiv-grotesk, sans-serif}h1{font-family:"beautiful_mindsserif_one";font-weight:700}p{line-height:2em;font-size:0.875rem;font-size:clamp(0.875rem, 2.5vw, 1rem)}
+/*# sourceMappingURL=styles.min.css.map */
