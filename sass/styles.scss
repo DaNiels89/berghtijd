@@ -1,16 +1,5 @@
-$fontBeautifulMinds: "beautiful_mindsserif_one";
 $fontAktivGrotesk: aktiv-grotesk, sans-serif;
-
-$fontWeightBold: 700;
-
-$colorLight: #ffffff;
-$colorPrimary: #d8ac9f;
-$colorText: #53565a;
-$colorLightRedBG: #fdede5;
-$colorRedAccent: #c26e60;
-
-$clamp1416: clamp(0.875rem, 2.5vw, 1rem);
-$clamp1622: clamp(1rem, 2.5vw, 1.375rem);
+$fontBeautifulMinds: "beautiful_mindsserif_one";
 
 // Font Beautiful Minds
 @font-face {
@@ -22,21 +11,297 @@ $clamp1622: clamp(1rem, 2.5vw, 1.375rem);
 	font-display: swap;
 }
 
+.ff {
+	&-ag {
+		font-family: $fontAktivGrotesk;
+	}
+	&-bm {
+		font-family: $fontBeautifulMinds;
+	}
+}
+
+$colorLight: #ffffff;
+$colorPrimary: #d8ac9f;
+$colorText: #53565a;
+$colorLightRed: #fdede5;
+$colorRedAccent: #c26e60;
+
+.fc {
+	&-light {
+		color: $colorLight;
+	}
+	&-primary {
+		color: $colorPrimary;
+	}
+	&-text {
+		color: $colorText;
+	}
+	&-light-red {
+		color: $colorLightRed;
+	}
+	&-red-accent {
+		color: $colorRedAccent;
+	}
+}
+
+.bgc {
+	&-light {
+		background: $colorLight;
+	}
+	&-primary {
+		background: $colorPrimary;
+	}
+	&-text {
+		background: $colorText;
+	}
+	&-light-red {
+		background: $colorLightRed;
+	}
+	&-red-accent {
+		background: $colorRedAccent;
+	}
+}
+
+$clamp1214: clamp(0.75rem, 2.5vw, 0.875rem);
+$clamp1416: clamp(0.875rem, 2.5vw, 1rem);
+$clamp1420: clamp(0.875rem, 2.5vw, 1.25rem);
+$clamp1618: clamp(1rem, 2.5vw, 1.125rem);
+$clamp1622: clamp(1rem, 2.5vw, 1.375rem);
+$clamp1822: clamp(1.125rem, 2.5vw, 1.375rem);
+$clamp2030: clamp(1.25rem, 2.5vw, 1.875rem);
+$clamp3060: clamp(1.875rem, 10vw, 3.75em);
+$clamp70140: clamp(4.375rem, 10vw, 8.75em);
+
+.fs {
+	&-1214 {
+		font-size: 0.75rem;
+		font-size: $clamp1214;
+	}
+	&-14 {
+		font-size: 0.875rem;
+	}
+	&-1416 {
+		font-size: 0.875rem;
+		font-size: $clamp1416;
+	}
+	&-1420 {
+		font-size: 0.875rem;
+		font-size: $clamp1420;
+	}
+	&-1618 {
+		font-size: 1rem;
+		font-size: $clamp1618;
+	}
+	&-1622 {
+		font-size: 1rem;
+		font-size: $clamp1622;
+	}
+	&-1822 {
+		font-size: 1.125rem;
+		font-size: $clamp1822;
+	}
+	&-2030 {
+		font-size: 1.25rem;
+		font-size: $clamp2030;
+	}
+	&-3060 {
+		font-size: 1.875rem;
+		font-size: $clamp3060;
+	}
+	&-37 {
+		font-size: 2.3125rem;
+	}
+	&-70140 {
+		font-size: 4.375rem;
+		font-size: $clamp70140;
+	}
+}
+
+$fontWeightBold: 700;
+
+.fw {
+	&-700 {
+		font-weight: $fontWeightBold;
+	}
+}
+
+$lh-12: 1.2;
+$lh-2: 2;
+
+.lh {
+	&-12 {
+		line-height: $lh-12;
+	}
+	&-2 {
+		line-height: $lh-2;
+	}
+}
+
+$ls-200: 0.2em;
+
+.ls {
+	&-200 {
+		letter-spacing: $ls-200;
+	}
+}
+
+// || Beginning of styling the pages
+
 html:focus-within {
 	scroll-behavior: smooth;
 }
 
 body {
 	font-family: aktiv-grotesk, sans-serif;
+	color: $colorText;
+	line-height: $lh-12;
+}
+
+h1,
+h2,
+h3 {
+	font-family: $fontBeautifulMinds;
+	// font-weight: $fontWeightBold;
 }
 
 h1 {
-	font-family: $fontBeautifulMinds;
-	font-weight: $fontWeightBold;
+	font-size: 10px;
+	font-size: $clamp70140;
+}
+
+h2 {
+	font-size: 1.875rem;
+	font-size: $clamp3060;
+	&.mw-12ch {
+		max-width: 12ch;
+	}
+}
+
+h3 {
+	font-size: 1.25rem;
+	font-size: $clamp2030;
 }
 
 p {
-	line-height: 2em;
 	font-size: 0.875rem;
 	font-size: $clamp1416;
+	line-height: $lh-2;
+}
+
+a {
+	color: $colorRedAccent;
+	font-size: $clamp1822;
+	font-family: $fontBeautifulMinds;
+
+	&.btn-primary {
+		background: none;
+		border: none;
+		padding: 0;
+		margin: 0;
+		color: $colorRedAccent;
+		font-size: $clamp1822;
+		outline: none !important;
+		box-shadow: none !important;
+		& .mr-2030 {
+			margin-right: 20px;
+		}
+		&:hover {
+			color: $colorRedAccent;
+			background: none;
+			text-decoration: underline;
+		}
+		&.arrow-next {
+			&::after {
+				content: "";
+				border-radius: 50%;
+				height: 40px;
+				width: 40px;
+				display: inline-block;
+				background: $colorRedAccent url(../img/arrow-next.svg) no-repeat;
+				// background-size: auto 15px;
+				background-position: center;
+				transition: background 0.2s ease;
+			}
+		}
+	}
+}
+
+footer {
+	a {
+		font-family: $fontAktivGrotesk;
+		font-size: $clamp1618;
+		color: $colorText;
+		line-height: $lh-2;
+		&:hover {
+			color: $colorRedAccent;
+		}
+	}
+}
+
+ul {
+	padding-left: 0;
+	li {
+		list-style-type: none;
+	}
+}
+
+// Start styling classes
+
+.header-bg-image-1 {
+	background-image: url("../img/header-image-1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: scroll;
+	background-position: top;
+	height: 100vh;
+	width: 100%;
+}
+
+.bg-image-1 {
+	background-image: url("../img/image-1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-2 {
+	background-image: url("../img/image-2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	a {
+		&.btn-primary {
+			& .mr-2030 {
+				margin-right: 30px;
+			}
+			&.arrow-next {
+				&::after {
+					height: 50px;
+					width: 50px;
+				}
+			}
+		}
+	}
+	.bg-image-1,
+	.bg-image-2 {
+		height: 800px;
+	}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 }

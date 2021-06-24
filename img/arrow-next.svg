@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="Group_16" data-name="Group 16" transform="translate(-398 -1684)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" transform="translate(398 1684)" fill="#c26e60"/>
+    <path id="chevron-right-solid" d="M34.5,44.045,29.222,49.32a.651.651,0,0,1-.921,0l-.615-.615a.651.651,0,0,1,0-.92l4.181-4.2-4.181-4.2a.651.651,0,0,1,0-.92l.615-.615a.651.651,0,0,1,.921,0L34.5,43.123A.651.651,0,0,1,34.5,44.045Z" transform="translate(391.909 1665.416)" fill="#fff"/>
+  </g>
+</svg>
